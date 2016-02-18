@@ -1,0 +1,14 @@
+<ion-view view-title="Champion Spotlight">
+  <ion-content>
+  <div ng-repeat="champ in champs">
+  <h2>{{champ.name}}: {{champ.title}}</h2>
+  <br>
+  <div id ="imagelore"><img ng-src="http://ddragon.leagueoflegends.com/cdn/6.3.1/img/champion/{{champ.image.full}}" alt="{{champ.name}}" align="left"><p>{{champ.lore}}</p>
+  	</div>
+  	<div id="skins"><div align="center"><img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.name}}_0.jpg" height="90%" width="90%"/>
+  	<img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.name}}_1.jpg" height="90%" width="90%"/>
+  	<img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.name}}_2.jpg" height="90%" width="90%"/>
+  	<img ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champ.name}}_3.jpg" height="90%" width="90%"/>
+  </div>
+  </ion-content>
+</ion-view>

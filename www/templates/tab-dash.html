@@ -1,0 +1,16 @@
+<ion-view view-title="<h2>HardCarry.gg</h2>">
+<link href="css/style.css" rel="stylesheet">
+  <ion-content>
+  <div align="center" class="searchForm">
+  <form><input type="text" ng-model="championInput" ng-trim="true" placeholder="Type Champion Here..." required><br></form>
+  </div>
+  <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" collection-repeat ="champ in champs | filter:{name:championInput}" href="#/tab/champion/{{champ.name}}">
+        <img ng-src="http://ddragon.leagueoflegends.com/cdn/6.3.1/img/champion/{{champ.image.full}}" alt="{{champ.name}}">
+        <h2>{{champ.name}}</h2>
+        <h3>{{champ.title}}</h3>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
